@@ -1,4 +1,4 @@
-package com.example.countries.adapter
+package com.example.countries.mainModule.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,7 @@ import com.example.countries.R
 import com.example.countries.databinding.ItemCountryBinding
 
 class CountriesAdapter(
-    private val countries: List<Country>,
+    private var countries: List<Country>,
     private val listener: CountriesListener
 ) : RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
 
@@ -30,7 +30,6 @@ class CountriesAdapter(
             }
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_country, parent, false)
         return ViewHolder(view)
@@ -45,4 +44,10 @@ class CountriesAdapter(
     }
 
     override fun getItemCount(): Int = countries.size
+
+
+    fun setCountries(countries: List<Country>) {
+        this.countries = countries as MutableList<Country>
+        notifyDataSetChanged()
+    }
 }

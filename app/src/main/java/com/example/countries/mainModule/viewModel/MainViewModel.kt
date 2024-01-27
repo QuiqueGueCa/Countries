@@ -1,10 +1,10 @@
-package com.example.countries.viewModel
+package com.example.countries.mainModule.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.countries.Country
-import com.example.countries.model.MainInteractor
+import com.example.countries.mainModule.model.MainInteractor
 
 class MainViewModel : ViewModel() {
 

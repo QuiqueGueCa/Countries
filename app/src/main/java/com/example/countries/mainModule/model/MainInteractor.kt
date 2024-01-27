@@ -1,4 +1,4 @@
-package com.example.countries.model
+package com.example.countries.mainModule.model
 
 import com.example.countries.Country
 import com.example.countries.R
