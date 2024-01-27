@@ -1,7 +1,7 @@
 package com.example.countries.mainModule.model
 
-import com.example.countries.Country
 import com.example.countries.R
+import com.example.countries.dataClasses.Country
 
 class MainInteractor {
     fun getCountries(): List<Country> {

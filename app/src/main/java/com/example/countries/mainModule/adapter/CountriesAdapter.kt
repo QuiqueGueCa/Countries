@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.countries.Country
 import com.example.countries.R
+import com.example.countries.dataClasses.Country
 import com.example.countries.databinding.ItemCountryBinding
 
 class CountriesAdapter(
@@ -14,22 +14,17 @@ class CountriesAdapter(
 ) : RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
 
     interface CountriesListener {
-        fun onCellClick(imgCountry: Int)
-        fun onBtnClick(imgCity: Int)
+        fun onClick(imgToShow: Int)
     }
 
-    inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemCountryBinding.bind(view)
-
         fun setListener(country: Country) {
-            binding.root.setOnClickListener {
-                listener.onCellClick(country.img)
-            }
-            binding.btnCapital.setOnClickListener {
-                listener.onBtnClick(country.imgCity)
-            }
+            binding.root.setOnClickListener { listener.onClick(country.img) }
+            binding.btnCapital.setOnClickListener { listener.onClick(country.imgCity) }
         }
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_country, parent, false)
         return ViewHolder(view)
@@ -44,7 +39,6 @@ class CountriesAdapter(
     }
 
     override fun getItemCount(): Int = countries.size
-
 
     fun setCountries(countries: List<Country>) {
         this.countries = countries as MutableList<Country>

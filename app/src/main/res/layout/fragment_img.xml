@@ -8,9 +8,9 @@
         android:id="@+id/imgCountry"
         android:layout_width="@dimen/imgCountry"
         android:layout_height="@dimen/imgCountry"
+        android:layout_marginTop="@dimen/common_pading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

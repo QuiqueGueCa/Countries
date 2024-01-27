@@ -10,7 +10,6 @@ class ImgViewModel : ViewModel() {
 
     private val imgToShow: LiveData<Int> get() = _imgToShow
 
-
     fun setImg(imgResource: Int) {
         _imgToShow.value = imgResource
     }
