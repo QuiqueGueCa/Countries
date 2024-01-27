@@ -2,4 +2,5 @@
 <resources>
     <dimen name="common_pading">16dp</dimen>
     <dimen name="txtSize">30sp</dimen>
+    <dimen name="imgCountry">300dp</dimen>
 </resources>
