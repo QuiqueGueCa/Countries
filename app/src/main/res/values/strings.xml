@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Countries</string>
+    <string name="btnText">Ir a la capital</string>
 </resources>
