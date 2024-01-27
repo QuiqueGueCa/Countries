@@ -12,12 +12,9 @@ class MainViewModel : ViewModel() {
     private val _countries = MutableLiveData<List<Country>>()
 
     init {
-        setData()
-    }
-
-    private fun setData() {
         _countries.value = interactor.getCountries()
     }
+
 
     val countries: LiveData<List<Country>> get() = _countries
 
