@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
+        android:id="@+id/imgCountry"
         android:layout_width="@dimen/imgCountry"
         android:layout_height="@dimen/imgCountry"
         app:layout_constraintStart_toStartOf="parent"
